@@ -15,7 +15,7 @@ export class UserPostComponent implements OnInit {
   constructor(private query: QueryAnyoneService, private activ: ActivatedRoute) {
 
     this.activ.params.subscribe(value => {
-     this.query.getPost(value.id).subscribe(post => console.log(post));
+     this.query.getPost(value.id).subscribe(post => this.UserPost = post);
     });
 
 

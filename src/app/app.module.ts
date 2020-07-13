@@ -13,6 +13,7 @@ import { AllUserComponent } from './components/all-user/all-user.component';
 import { AllPostComponent } from './components/all-post/all-post.component';
 import { AllCommentComponent } from './components/all-comment/all-comment.component';
 import { UserPostComponent } from './components/user-post/user-post.component';
+import { PostCommentComponent } from './components/post-comment/post-comment.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { UserPostComponent } from './components/user-post/user-post.component';
     AllUserComponent,
     AllPostComponent,
     AllCommentComponent,
-    UserPostComponent
+    UserPostComponent,
+    PostCommentComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,9 @@ import { UserPostComponent } from './components/user-post/user-post.component';
       },
       {
         path: 'users/posts/:id', component: UserPostComponent
+      },
+      {
+        path: 'posts/comments/:id', component: PostCommentComponent
       }
     ])
   ],
